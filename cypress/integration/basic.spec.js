@@ -9,5 +9,4 @@ describe('my first cypress test', () => {
       cy.get('@title').contains('Example Domain')
       cy.get('@title').should('be.visible')
   })
-}
-)
+})
