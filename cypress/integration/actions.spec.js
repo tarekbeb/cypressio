@@ -22,8 +22,17 @@ describe('Action Test', () => {
   })
   it('Should enable slider', function(){
       cy.get('#slider').as('slider')
+
       cy.get('@slider').should('have.class', 'ui-state-disabled')
       cy.get('#tried-test-cafe').click()
       cy.get('@slider').should('not.have.class', 'ui-state-disabled')
+  })
+  it('should have empty value by detfault', function(){
+      cy.get('#comments').as('textArea')
+
+      cy.get('#tried-test-cafe').click()
+      cy.get('@textArea').should('have.value', '')
+      cy.get('@textArea').type('new value')
+      cy.get('@textArea').should('have.value', 'new value')
   })
 })
