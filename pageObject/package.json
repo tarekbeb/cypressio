@@ -1,0 +1,25 @@
+{
+  "name": "visualtests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run-tests": "cypress run",
+    "cy:update-snapshot": "cypress run --env updateSnapshots=true"
+  },
+  "keywords": [
+    "cypress",
+    "visual",
+    "testing",
+    "snapshots"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.8.3",
+    "cypress-image-snapshot": "^3.1.1",
+    "prettier": "^1.19.1"
+  }
+}
